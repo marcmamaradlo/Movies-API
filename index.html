@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lobster&display=swap');
+    </style>
+    <link rel="stylesheet" href="Movies API.css">
+    <script src="https://kit.fontawesome.com/1a81801219.js" crossorigin="anonymous"></script>
+    <title>Creating Promise</title>
+</head>
+
+<body>
+    <nav>
+        <div class="row nav-bar">
+            <div class="col navbar-link-container text-left">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">What's New</a>
+                <a class="nav-link" href="#">Info</a>
+            </div>
+            <div class="col navbar-icon-container">
+                <i class="fa fa-brands fa-youtube"></i>
+                <i class="fa fa-brands fa-instagram"></i>
+                <i class="fa fa-brands fa-facebook-square"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="masterHead">
+        <div class="header-text">
+            <h1>TV MAZE</h1>
+            <h1>FREE API</h1>
+        </div>
+    </div>
+    <div class="div-container">
+        <div class="header-text-container">
+            <h1 class="display-4">TV Shows</h1>
+            <p class="font-weight-light">search for your favorite television shows.</p>
+        </div>
+        <div class="form-container">
+            <form id="form">
+                <div class="row">
+                    <div class="input-div">
+                        <input type="text" value="keyword" id="searchForm" name="query">
+                    </div>
+                    <div class="button-div">
+                        <button id="button">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="div-category">
+            <a href="">Action</a>
+            <a href="">Comedy</a>
+            <a href="">Horror</a>
+            <a href="">Anime</a>
+            <a href="">Family</a>
+            <a href="">Documentary</a>
+            <a href="">Scripted</a>
+            <a href="">Drama</a>
+            <a href="">Sci-Fi</a>
+            <a href="">Fantasy</a>
+        </div>
+    </div>
+    <section>
+        <div class="row main-container" id="container">
+            <!-- <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <img class="img-fluid"
+                        src="https://images.unsplash.com/photo-1505739998589-00fc191ce01d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                </div>
+                <div class="col-lg-6 col-md-12 p-5">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quis quo, esse explicabo quae
+                        pariatur cumque quasi exercitationem et qui ab! Maxime, ab dolore quia minus eos accusamus quis
+                        repellendus incidunt possimus blanditiis quibusdam provident! Magni assumenda necessitatibus
+                        corporis sunt?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, qui.</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center order-sm-2">
+                <div class="col-lg-6 col-md-12 order-lg-1 order-md-2 order-sm-2 p-5">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatibus tenetur quidem nemo
+                        odit. Deserunt doloremque numquam laudantium reprehenderit quas?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, sequi pariatur? Reiciendis
+                        fuga illum sunt aspernatur magnam architecto, quod, at corrupti error deserunt enim. Facere amet
+                        enim perferendis laudantium rem!</p>
+                </div>
+                <div class="col-lg-6 col-md-12 order-lg-2 order-md-1">
+                    <img class="img-fluid"
+                        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                </div>
+            </div> -->
+        </div>
+
+        <!-- <div class="main-container" id="container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1659424864086-468b4eaa57bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" class="card-img-top" alt="..." id="img"/>
+                <div class="card-body">
+                    <h5 class="card-title" id="title">${newArr.show.name}</h5>
+                </div>
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" id="language">Language: ${newArr.show.language}</li>
+                        <li class="list-group-item" id="category">Category: ${newArr.show.type}</li>
+                        <li class="list-group-item" id="genre">Genre: ${newArr.show.genres}</li>                     
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1659424864086-468b4eaa57bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" class="card-img-top" alt="..." id="img"/>
+                <div class="card-body">
+                    <h5 class="card-title" id="title">${newArr.show.name}</h5>
+                </div>
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" id="language">Language: ${newArr.show.language}</li>
+                        <li class="list-group-item" id="category">Category: ${newArr.show.type}</li>
+                        <li class="list-group-item" id="genre">Genre: ${newArr.show.genres}</li>                     
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1659424864086-468b4eaa57bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" class="card-img-top" alt="..." id="img"/>
+                <div class="card-body">
+                    <h5 class="card-title" id="title">${newArr.show.name}</h5>
+                </div>
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" id="language">Language: ${newArr.show.language}</li>
+                        <li class="list-group-item" id="category">Category: ${newArr.show.type}</li>
+                        <li class="list-group-item" id="genre">Genre: ${newArr.show.genres}</li>                     
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <div class="footer">
+        <div class="row footer-top">
+            <div class="col-12">
+                <h4 class="text-arimo text-arimo-header">This is just a project for my MOVIES API</h4>
+                <p class="text-arimo text-small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+                    quisquam
+                    reiciendis
+                    excepturi officia ipsa rem, maxime vitae vel nam. Vero, expedita hic corrupti voluptatum
+                    praesentium
+                    repellat reprehenderit,</p>
+                <a class="api-link" href="https://www.tvmaze.com/api">Movies API</a>
+            </div>
+        </div>
+        <div class="row footer-bottom">
+            <div class="col-sm-12">
+                <h1 class="text-cursive">Thank You!</h1>
+                <i class="i-bottom fa fa-brands fa-youtube"></i>
+                <i class="i-bottom fa fa-brands fa-instagram"></i>
+                <i class="i-bottom fa fa-brands fa-facebook-square"></i>
+                <p class="text-arimo m-3">marc.mamaradlo@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="Movies API.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
