@@ -37,17 +37,14 @@ input {
     height: 2.4rem;
     width: 100%;
     padding: 10px;
-    color: #878489;
     border-right: 1px solid #282726;
 }
 
 button {
     background-color: #cccccc;
-    color: #282726;
     border: #282726;
     width: 10rem;
     height: 2.4rem;
-    color: #878489;
 }
 
 button:hover {
@@ -173,7 +170,6 @@ nav {
     flex-wrap: wrap;
 }
 
-.div-category a{
     padding: 0.5rem 0.5rem;
     color: #878489;
 }

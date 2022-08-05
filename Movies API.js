@@ -15,12 +15,11 @@ form.addEventListener('submit', async function (e) {
   const searchTerm = form.elements.query.value;
   const config = { params: { q: searchTerm } };
   try {
-    const res = await axios.get(`http://api.tvmaze.com/search/shows`, config);
     makeImages(res.data);
-  } catch (error) {
-    console.log('error');
+    } catch (error) {
+      console.log('error');
+    }
   }
-});
 
 const makeImages = (shows) => {
   let html = '';
@@ -45,32 +44,19 @@ const makeImages = (shows) => {
       console.log("body card error");
     }
 
-    // try {
-    //   groupFlush = `
-    //     <li class="list-group-item" id="language">${newArr.show.language}</li>
-    //     <li class="list-group-item" id="category">${newArr.show.type}</li>
-    //     <li class="list-group-item" id="genre">${newArr.show.genres}</li>
-    //   `
-    // } catch (e) {
-    //   console.log("groupFlushError");
-    // }
-
     try {
-      listLanguage = `${newArr.show.language}`
     } catch (e) {
       console.log("language not found");
       listLanguage = `Language:`
     }
 
     try {
-      listCategory = `${newArr.show.type}`
     } catch (e) {
       console.log("category not found");
       listCategory = `Category:`
     }
 
     try {
-      listGenre = `${newArr.show.genres}`
     } catch (e) {
       console.log("genre not found");
       listGenre = `Genre:`
