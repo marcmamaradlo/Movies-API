@@ -56,21 +56,21 @@ const makeImages = (shows) => {
     // }
 
     try {
-      listLanguage = `${newArr.show.language}`
+      listLanguage = `Language: ${newArr.show.language}`
     } catch (e) {
       console.log("language not found");
       listLanguage = `Language:`
     }
 
     try {
-      listCategory = `${newArr.show.type}`
+      listCategory = `Category: ${newArr.show.type}`
     } catch (e) {
       console.log("category not found");
       listCategory = `Category:`
     }
 
     try {
-      listGenre = `${newArr.show.genres}`
+      listGenre = `Genre: ${newArr.show.genres}`
     } catch (e) {
       console.log("genre not found");
       listGenre = `Genre:`
