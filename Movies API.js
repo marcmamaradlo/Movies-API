@@ -14,11 +14,12 @@ form.addEventListener('submit', async function (e) {
   const searchTerm = form.elements.query.value;
   const config = { params: { q: searchTerm } };
   try {
+    const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     makeImages(res.data);
-    } catch (error) {
-      console.log('error');
-    }
+  } catch (error) {
+    console.log('error');
   }
+});
 
 const makeImages = (shows) => {
   let html = '';
@@ -44,18 +45,21 @@ const makeImages = (shows) => {
     }
 
     try {
+      listLanguage = `Language: ${newArr.show.language}`
     } catch (e) {
       console.log("language not found");
       listLanguage = `Language:`
     }
 
     try {
+      listCategory = `Category: ${newArr.show.type}`
     } catch (e) {
       console.log("category not found");
       listCategory = `Category:`
     }
 
     try {
+      listGenre = `Genre: ${newArr.show.genres}`
     } catch (e) {
       console.log("genre not found");
       listGenre = `Genre:`
