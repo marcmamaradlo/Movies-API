@@ -17,6 +17,7 @@ i {
     margin-top: 0.5rem;
     font-size: 1.4rem;
     padding: 0 1rem;
+    color: #cccccc;
 }
 
 i:hover {
@@ -31,12 +32,19 @@ a:hover {
 
 input {
     border: none;
+    background-color: #282726;
     height: 2.4rem;
     width: 100%;
     padding: 10px;
+    color: #cccccc;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
 }
 
 button {
+    background-color: #282726;
+    border: 1px solid #cccccc;
+    width: 7rem;
     height: 2.4rem;
     color: #cccccc;
     display: flex;
@@ -46,6 +54,8 @@ button {
 
 button:hover {
     color: #282726;
+    background-color: #cccccc;
+    transition: 400ms;
 }
 
 a {
@@ -68,6 +78,22 @@ section {
 }
 
 nav {
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }
 
 .nav-bar {
@@ -129,15 +155,21 @@ nav {
 }
 
 .form-container {
+    display: flex;
     flex-direction: row;
     width: 50%;
+    height: auto;
 }
 
 .input-div {
+    display: flex;
     margin: auto;
+    width: 100%;
 }
 
 .button-div {
+    display: flex;
+
 }
 
 .main-container {
@@ -155,6 +187,7 @@ nav {
     flex-wrap: wrap;
 }
 
+.div-category p {
     padding: 0.5rem 0.5rem;
     color: #878489;
 }
@@ -165,6 +198,7 @@ nav {
 }
 
 .card {
+    height: 30rem;
     width: 15rem;
     margin-top: 1rem;
     background-color: #cccccc;
@@ -174,6 +208,7 @@ nav {
 .card-body {
     display: flex;
     padding: 5px;
+    margin-bottom: 0rem;
 }
 
 .card:hover {
@@ -183,7 +218,9 @@ nav {
 .card-title {
     align-items: center;
     justify-content: center;
+    font-size: 14px;
     padding: 5px;
+    margin-bottom: 0rem;
 }
 
 .card-title,
@@ -192,6 +229,7 @@ nav {
 }
 
 .list-group-item {
+    font-size: 14px;
     background-color: #cccc;
     color: #282726;
 }
@@ -283,8 +321,12 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+    
     section {
         padding: 0.5rem 1rem;
+    }
+    .masterHead {
+        height: 40vh;
     }
 
     .main-container {
@@ -293,16 +335,20 @@ img {
     }
 
     .form-container {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 576px) {
 
     nav {
+        padding: 0rem;
     }
 
     button {
+        width: 2.5rem;
     }
+
     section {
         padding: 0.5rem;
     }
@@ -321,6 +367,7 @@ img {
     }
 
     .header-text {
+        display: none;
     }
 
     .input-div {
@@ -330,8 +377,25 @@ img {
     .button-div {
         align-items: center;
     }
+
+    .search-text {
+        display: none;
+    }
+
     .div-container {
         padding: 1rem;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .div-category {
+        margin-top: 1rem;
+    }
+
+    .div-category p {
+        font-size: 14px;
     }
 
     .order-sm-2 {
@@ -343,7 +407,16 @@ img {
         margin: 0px;
     }
 
+    .card {
+        height: 28rem;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
     .list-group-item {
+        padding: 0.5rem;
         font-size: 12px;
     }
 
@@ -355,4 +428,5 @@ img {
         font-size: 12px;
     }
 
+    
 }
