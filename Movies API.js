@@ -8,7 +8,6 @@ const summary = document.querySelector('#summary');
 const language = document.querySelector('#language');
 const category = document.querySelector('#category');
 const genre = document.querySelector('#genre');
-const img = document.querySelector('#img')
 
 form.addEventListener('submit', async function (e) {
   e.preventDefault();

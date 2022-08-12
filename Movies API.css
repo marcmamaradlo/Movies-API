@@ -17,7 +17,6 @@ i {
     margin-top: 0.5rem;
     font-size: 1.4rem;
     padding: 0 1rem;
-    color: #878489;
 }
 
 i:hover {
@@ -32,24 +31,21 @@ a:hover {
 
 input {
     border: none;
-    background-color: #cccccc;
-    border-radius: 0px;
     height: 2.4rem;
     width: 100%;
     padding: 10px;
-    border-right: 1px solid #282726;
 }
 
 button {
-    background-color: #cccccc;
-    border: #282726;
-    width: 10rem;
     height: 2.4rem;
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:hover {
     color: #282726;
-    background-color: #e5be1a;
 }
 
 a {
@@ -72,7 +68,6 @@ section {
 }
 
 nav {
-    padding:  1rem;
 }
 
 .nav-bar {
@@ -135,24 +130,14 @@ nav {
 
 .form-container {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
     width: 50%;
 }
 
 .input-div {
-    display: inline-flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 70%;
     margin: auto;
 }
 
 .button-div {
-    display: inline-flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 30%;
 }
 
 .main-container {
@@ -180,7 +165,6 @@ nav {
 }
 
 .card {
-    height: 100%;
     width: 15rem;
     margin-top: 1rem;
     background-color: #cccccc;
@@ -199,7 +183,6 @@ nav {
 .card-title {
     align-items: center;
     justify-content: center;
-    font-size: 16px;
     padding: 5px;
 }
 
@@ -300,10 +283,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-    .masterHead {
-        height: 40vh;
-    }
-
     section {
         padding: 0.5rem 1rem;
     }
@@ -314,22 +293,16 @@ img {
     }
 
     .form-container {
-        width: 80%;
     }
 }
 
 @media screen and (max-width: 576px) {
 
     nav {
-    padding: 0rem;
     }
 
     button {
-        width: 95%;
-        margin: 0px;
-        padding: 0px;
     }
-    
     section {
         padding: 0.5rem;
     }
@@ -348,26 +321,15 @@ img {
     }
 
     .header-text {
-        margin: 0px;
-    }
-
-    .header-text h1 {
-        text-shadow: 1px 1px 10px white;
     }
 
     .input-div {
         align-items: center;
-        width: 94.5%;
-        margin: auto;
     }
 
     .button-div {
         align-items: center;
-        width: 100%;
-        margin: auto;
-        padding-top: 1rem;
     }
-    
     .div-container {
         padding: 1rem;
     }
@@ -393,7 +355,4 @@ img {
         font-size: 12px;
     }
 
-    .form-container {
-        width: 100%;
-    }
 }
