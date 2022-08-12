@@ -19,7 +19,6 @@ form.addEventListener('submit', async function (e) {
   } catch (error) {
     console.log('error');
   }
-});
 );
 
 const makeImages = (shows) => {
@@ -60,10 +59,6 @@ const makeImages = (shows) => {
     }
 
     try {
-<<<<<<< Updated upstream
-      listGenre = `Genre: ${newArr.show.genres}`
-=======
->>>>>>> Stashed changes
     } catch (e) {
       console.log("genre not found");
       listGenre = `Genre:`
@@ -95,4 +90,3 @@ const makeImages = (shows) => {
 
 searchForm.addEventListener('click', () => {
   searchForm.value = '';
-});
