@@ -8,6 +8,17 @@ const summary = document.querySelector('#summary');
 const language = document.querySelector('#language');
 const category = document.querySelector('#category');
 const genre = document.querySelector('#genre');
+const img = document.querySelector('#img');
+const linkAction = document.querySelector('#linkAction');
+const linkComedy = document.querySelector('#linkComedy');
+const linkHorror = document.querySelector('#linkHorror');
+const linkAnime = document.querySelector('#linkAnime');
+const linkFamily = document.querySelector('#linkFamily');
+const linkDocumentary = document.querySelector('#linkdocumentary');
+const linkScripted = document.querySelector('#linkScripted');
+const linkDrama = document.querySelector('#linkDrama');
+const linkSciFi = document.querySelector('#linkSciFi');
+const linkFantasy = document.querySelector('#linkFantasy');
 
 form.addEventListener('submit', async function (e) {
   e.preventDefault();
@@ -16,6 +27,9 @@ form.addEventListener('submit', async function (e) {
   try {
     const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     makeImages(res.data);
+    } catch (error) {
+      console.log('error');
+    }
   }
 );
 
@@ -57,6 +71,7 @@ const makeImages = (shows) => {
     }
 
     try {
+      listGenre = `Genre: ${newArr.show.genres[0]}`
     } catch (e) {
       console.log("genre not found");
       listGenre = `Genre:`
@@ -88,3 +103,4 @@ const makeImages = (shows) => {
 
 searchForm.addEventListener('click', () => {
   searchForm.value = '';
+});
