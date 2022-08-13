@@ -16,8 +16,6 @@ form.addEventListener('submit', async function (e) {
   try {
     const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     makeImages(res.data);
-  } catch (error) {
-    console.log('error');
   }
 );
 
